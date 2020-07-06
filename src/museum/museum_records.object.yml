@@ -5,14 +5,6 @@ enable_api: true
 enable_files: true
 enable_audit: true
 fields:
-  museum_id:
-    label: 博物馆
-    type: master_detail
-    reference_to: museums
-    sortable: true
-    filterable: true
-    searchable: true
-    required: true
   year:
     label: 年度
     type: select
@@ -26,6 +18,15 @@ fields:
     required: true
     defaultValue: 2019
     searchable: true
+    is_name: true
+  museum_id:
+    label: 博物馆
+    type: master_detail
+    reference_to: museums
+    sortable: true
+    filterable: true
+    searchable: true
+    required: true
   collection_qty:
     type: number
     label: 藏品数量(件/套)
@@ -148,8 +149,8 @@ list_views:
   all:
     label: 所有备案信息
     columns:
-      - museum_id
       - year
+      - museum_id
       - collection_qty
       - treasure_qty
       - gradeone_qty
