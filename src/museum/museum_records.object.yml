@@ -168,6 +168,24 @@ list_views:
     label: 已核改
     filters: [["nation_verify_state", "=", "yes"]]
 
+actions:
+  submit: 
+    label: "上报"
+    on: "record" 
+    sort: 10
+  submitNation: 
+    label: "上报国家局"
+    on: "record" 
+    sort: 20  
+  pass: 
+    label: "通过"
+    on: "record" 
+    sort: 30  
+  returnMuseum: 
+    label: "退回"
+    on: "record"
+    sort: 50  
+
 permission_set:
   user:
     allowCreate: false
