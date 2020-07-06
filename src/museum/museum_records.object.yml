@@ -25,30 +25,37 @@ fields:
     filterable: true
     required: true
     defaultValue: 2019
+    searchable: true
   collection_qty:
     type: number
     label: 藏品数量(件/套)
     scale: 0
+    searchable: true
   treasure_qty:
     type: number
     label: 珍贵文物(件/套)
     scale: 0
+    searchable: true
   gradeone_qty:
     type: number
     label: 一级文物(件/套)
     scale: 0
+    searchable: true
   exhibition_qty:
     type: number
     label: 陈列展览(个)
     scale: 0
+    searchable: true
   education_qty:
     type: number
     label: 教育活动(次)
     scale: 0
+    searchable: true
   visitors:
     type: number
     label: 参观人数(万人次)
     scale: 1
+    searchable: true
   new_built:
     label: 新建、改扩建
     type: select
@@ -61,6 +68,7 @@ fields:
     filterable: true
     required: true
     defaultValue: no
+    searchable: true
   new_record:
     label: 新备案
     type: select
@@ -73,18 +81,20 @@ fields:
     filterable: true
     required: true
     defaultValue: no
+    searchable: true
   note:
     type: textarea
     label: 备注
     is_wide: true
     rows: 2
+    searchable: true
   owner: 
     label: 所属账户
-    omit: true
+    omit: false
     hidden: false
   company_id: 
     label: 所属省局
-    omit: true
+    omit: false
     hidden: false
   province_verify_state:
     label: 省局审批状态
@@ -97,16 +107,19 @@ fields:
       - label: 省级文物部门未核改
         value: no
     defaultValue: no
+    searchable: true
   province_verify_date:
     label: 省局审批日期
     type: date
     group: 省局核改
+    searchable: true
   province_approval_opinion:
     label: 省局审批意见
     type: textarea
     group: 省局核改
     is_wide: true
     rows: 2
+    searchable: true
   nation_verify_state:
     label: 国家局审批状态
     type: select
@@ -118,16 +131,19 @@ fields:
       - label: 国家级文物部门未核改
         value: no
     defaultValue: no
+    searchable: true
   nation_verify_date:
     label: 国家局审批日期
     type: date
     group: 国家局核改
+    searchable: true
   nation_approval_opinion:
     label: 国家局审批意见
     type: textarea
     group: 国家局核改
     is_wide: true
     rows: 2
+    searchable: true
 list_views:
   all:
     label: 所有备案信息
