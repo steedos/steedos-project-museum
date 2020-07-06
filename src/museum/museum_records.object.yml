@@ -108,6 +108,8 @@ permission_set:
     allowDelete: true
     allowEdit: true
     allowRead: true
+    viewCompanyRecords: false
+    modifyCompanyRecords: false
     modifyAllRecords: false
     viewAllRecords: true 
   admin:
@@ -115,5 +117,7 @@ permission_set:
     allowDelete: true
     allowEdit: true
     allowRead: true
+    viewCompanyRecords: true
+    modifyCompanyRecords: true
     modifyAllRecords: true
     viewAllRecords: true
