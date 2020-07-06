@@ -2,6 +2,8 @@ name: museum_records
 label: 年度备案
 icon: lead_list
 enable_api: true
+enable_files: true
+enable_audit: true
 fields:
   museum_id:
     label: 博物馆
@@ -76,6 +78,14 @@ fields:
     label: 备注
     is_wide: true
     rows: 2
+  owner: 
+    label: 所属账户
+    omit: false
+    hidden: false
+  company_id: 
+    label: 所属省局
+    omit: false
+    hidden: false
 
 list_views:
   all:

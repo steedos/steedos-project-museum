@@ -1,4 +1,4 @@
-name: museum
+name: museums
 label: 博物馆
 icon: contract
 enable_api: true
@@ -129,6 +129,16 @@ fields:
     label: 开放时间
     searchable: true
     is_wide: true
+  owner: 
+    label: 所属账户
+    omit: false
+    hidden: false
+    required: true
+  company_id: 
+    label: 所属省局
+    omit: false
+    hidden: false
+    required: true
 list_views:
   all:
     label: 所有博物馆
