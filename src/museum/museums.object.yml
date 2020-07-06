@@ -1,6 +1,6 @@
 name: museums
 label: 博物馆
-icon: contract
+icon: instore_locations
 enable_api: true
 enable_files: true
 fields:
