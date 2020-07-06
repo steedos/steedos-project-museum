@@ -80,11 +80,11 @@ fields:
     rows: 2
   owner: 
     label: 所属账户
-    omit: false
+    omit: true
     hidden: false
   company_id: 
     label: 所属省局
-    omit: false
+    omit: true
     hidden: false
   province_verify_state:
     label: 省局审批状态
