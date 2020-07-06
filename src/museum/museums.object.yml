@@ -153,10 +153,10 @@ list_views:
       - address_county
 permission_set:
   user:
-    allowCreate: true
+    allowCreate: false
     allowDelete: false
-    allowEdit: true
-    allowRead: true
+    allowEdit: false
+    allowRead: false
     viewCompanyRecords: false
     modifyCompanyRecords: false
     modifyAllRecords: false
