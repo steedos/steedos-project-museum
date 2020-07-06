@@ -158,6 +158,15 @@ list_views:
       - visitors
       - new_built
       - new_record
+  province_tobeverified:
+    label: 待省局核改
+    filters: [["province_verify_state", "=", "no"]]
+  nation_tobeverified:
+    label: 待国家局核改
+    filters: [["province_verify_state", "=", "yes"],["nation_verify_state", "=", "no"]]
+  nation_verified:
+    label: 已核改
+    filters: [["nation_verify_state", "=", "yes"]]
 
 permission_set:
   user:
