@@ -146,7 +146,7 @@ list_views:
 permission_set:
   user:
     allowCreate: true
-    allowDelete: true
+    allowDelete: false
     allowEdit: true
     allowRead: true
     viewCompanyRecords: false
