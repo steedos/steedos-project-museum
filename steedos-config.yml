@@ -29,5 +29,6 @@ tenant:
   enable_bind_mobile: false
 plugins:
   - "@steedos/accounts"
+  - "@steedos/plugin-enterprise"
 cron:
   instancerecordqueue_interval: 10000

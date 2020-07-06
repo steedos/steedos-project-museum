@@ -19,7 +19,8 @@
         "steedos-server": "1.21.0"
     },
     "devDependencies": {
-        "nodemon": "^1.19.1"
+        "nodemon": "^1.19.1",
+        "@steedos/plugin-enterprise": "^1.21.0"
     },
     "homepage": "https://developer.steedos.com",
     "resolutions": {
