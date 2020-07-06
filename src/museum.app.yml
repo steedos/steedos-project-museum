@@ -1,0 +1,7 @@
+_id: museum
+name: 博物馆
+description: 博物馆数据上报、审核、统计等。
+icon_slds: approval
+is_creator: true
+objects: 
+  - museum
