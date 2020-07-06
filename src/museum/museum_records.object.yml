@@ -86,7 +86,48 @@ fields:
     label: 所属省局
     omit: false
     hidden: false
-
+  province_verify_state:
+    label: 省局审批状态
+    type: select
+    group: 省局核改
+    sortable: true
+    options:
+      - label: 省级文物部门已核改
+        value: yes
+      - label: 省级文物部门未核改
+        value: no
+    defaultValue: no
+  province_verify_date:
+    label: 省局审批日期
+    type: date
+    group: 省局核改
+  province_approval_opinion:
+    label: 省局审批意见
+    type: textarea
+    group: 省局核改
+    is_wide: true
+    rows: 2
+  nation_verify_state:
+    label: 国家局审批状态
+    type: select
+    group: 国家局核改
+    sortable: true
+    options:
+      - label: 国家级文物部门已核改
+        value: yes
+      - label: 国家级文物部门未核改
+        value: no
+    defaultValue: no
+  nation_verify_date:
+    label: 国家局审批日期
+    type: date
+    group: 国家局核改
+  nation_approval_opinion:
+    label: 国家局审批意见
+    type: textarea
+    group: 国家局核改
+    is_wide: true
+    rows: 2
 list_views:
   all:
     label: 所有备案信息
