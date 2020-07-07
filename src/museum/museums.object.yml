@@ -140,9 +140,10 @@ list_views:
       - subordination
       - quality_level
       - free
-      - address_province
-      - address_city
-      - address_county
+      - address_provinceCode
+      - address_cityCode
+      - address_areaCode   
+    filter_fields: ["name", "type", "subordination", "quality_level", "address_provinceCode"]
 permission_set:
   user:
     allowCreate: false

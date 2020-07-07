@@ -140,16 +140,20 @@ fields:
 list_views:
   tobesubmited:
     label: 待上报/待修改
-    filters: [["verify_state", "=", "draft"]]
+    filters: [["verify_state", "=", "draft"]]  
+    filter_fields: ["year", "museum_id", "collection_qty", "treasure_qty", "gradeone_qty", "visitors"]
   province_tobeverified:
     label: 待省局审核
-    filters: [["verify_state", "=", "province_verifying"]]
+    filters: [["verify_state", "=", "province_verifying"]]  
+    filter_fields: ["year", "museum_id", "collection_qty", "treasure_qty", "gradeone_qty", "visitors"]
   nation_tobeverified:
     label: 待国家局审核
-    filters: [["verify_state", "=", "nation_verifying"]]
+    filters: [["verify_state", "=", "nation_verifying"]]  
+    filter_fields: ["year", "museum_id", "collection_qty", "treasure_qty", "gradeone_qty", "visitors"]
   nation_verified:
     label: 已审核通过
-    filters: [["verify_state", "=", "verified"]]
+    filters: [["verify_state", "=", "verified"]]  
+    filter_fields: ["year", "verify_state", "museum_id", "collection_qty", "treasure_qty", "gradeone_qty", "visitors"]
   all:
     label: 所有备案信息
     columns:
@@ -163,7 +167,8 @@ list_views:
       - education_qty
       - visitors
       - new_built
-      - new_record
+      - new_record   
+    filter_fields: ["year", "verify_state", "museum_id", "collection_qty", "treasure_qty", "gradeone_qty", "visitors"]
 
 actions:
   submit: 
