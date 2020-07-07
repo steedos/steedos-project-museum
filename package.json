@@ -11,7 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@steedos/accounts": "1.19.8",
+        "@steedos/accounts": "1.19.9",
         "@steedos/steedos-plugin-workflow": "^2.0.8",
         "china-division": "^2.3.1",
         "dotenv-flow": "^3.1.0",
