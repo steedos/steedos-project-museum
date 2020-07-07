@@ -155,6 +155,7 @@ list_views:
     columns:
       - year
       - museum_id
+      - verify_state
       - collection_qty
       - treasure_qty
       - gradeone_qty
