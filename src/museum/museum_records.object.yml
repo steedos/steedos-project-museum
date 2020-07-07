@@ -138,6 +138,18 @@ fields:
     rows: 2
     searchable: true
 list_views:
+  tobesubmited:
+    label: 待上报/待修改
+    filters: [["verify_state", "=", "draft"]]
+  province_tobeverified:
+    label: 待省局审核
+    filters: [["verify_state", "=", "province_verifying"]]
+  nation_tobeverified:
+    label: 待国家局审核
+    filters: [["verify_state", "=", "nation_verifying"]]
+  nation_verified:
+    label: 已审核同通过
+    filters: [["verify_state", "=", "verified"]]
   all:
     label: 所有备案信息
     columns:
@@ -151,18 +163,6 @@ list_views:
       - visitors
       - new_built
       - new_record
-  tobesubmited:
-    label: 待上报/待修改
-    filters: [["verify_state", "=", "draft"]]
-  province_tobeverified:
-    label: 待省局审核
-    filters: [["verify_state", "=", "province_verifying"]]
-  nation_tobeverified:
-    label: 待国家局审核
-    filters: [["verify_state", "=", "nation_verifying"]]
-  nation_verified:
-    label: 已审核同通过
-    filters: [["verify_state", "=", "verified"]]
 
 actions:
   submit: 
