@@ -60,28 +60,18 @@ fields:
     required: true
   free:
     label: 免费开放
-    type: select
+    type: boolean
     sortable: true
-    options:
-      - label: 是
-        value: yes
-      - label: 否
-        value: no
     filterable: true
     required: true
-    defaultValue: yes
+    defaultValue: true
   CRPU:
     label: 是否文物保护单位
-    type: select
+    type: boolean
     sortable: true
-    options:
-      - label: 是
-        value: yes
-      - label: 否
-        value: no
     filterable: true
     required: true
-    defaultValue: no
+    defaultValue: false
   address_province:
     label: 省
     type: select

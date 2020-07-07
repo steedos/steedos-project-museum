@@ -10,15 +10,14 @@ fields:
     type: select
     sortable: true
     options:
-      - label: 2019
-        value: 2019
-      - label: 2020
-        value: 2020
+      - label: "2019年"
+        value: "2019"
+      - label: "2020年"
+        value: "2020"
     filterable: true
     required: true
     defaultValue: 2019
     searchable: true
-    is_name: true
   museum_id:
     label: 博物馆
     type: master_detail
@@ -59,29 +58,19 @@ fields:
     searchable: true
   new_built:
     label: 新建、改扩建
-    type: select
+    type: boolean
     sortable: true
-    options:
-      - label: 是
-        value: yes
-      - label: 否
-        value: no
     filterable: true
     required: true
-    defaultValue: no
+    defaultValue: false
     searchable: true
   new_record:
     label: 新备案
-    type: select
+    type: boolean
     sortable: true
-    options:
-      - label: 是
-        value: yes
-      - label: 否
-        value: no
     filterable: true
     required: true
-    defaultValue: no
+    defaultValue: false
     searchable: true
   note:
     type: textarea
