@@ -78,6 +78,21 @@ fields:
     is_wide: true
     rows: 2
     searchable: true
+  verify_state:
+    label: 审批状态
+    type: select
+    sortable: true
+    options:
+      - label: 待上报/待修改
+        value: draft
+      - label: 省级文物部门审核
+        value: province_verifying
+      - label: 国家级文物部门审核
+        value: nation_verifying
+      - label: 已审核通过
+        value: verified
+    defaultValue: draft
+    searchable: true
   owner: 
     label: 所属账户
     omit: false
@@ -86,18 +101,12 @@ fields:
     label: 所属省局
     omit: false
     hidden: false
-  province_verify_state:
-    label: 省局审批状态
-    type: select
+  province_verifier:
+    label: 省局审批人
+    type: lookup
     group: 省局核改
-    sortable: true
-    options:
-      - label: 省级文物部门已核改
-        value: yes
-      - label: 省级文物部门未核改
-        value: no
-    defaultValue: no
     searchable: true
+    reference_to: space_users
   province_verify_date:
     label: 省局审批日期
     type: date
@@ -110,18 +119,12 @@ fields:
     is_wide: true
     rows: 2
     searchable: true
-  nation_verify_state:
-    label: 国家局审批状态
-    type: select
+  nation_verifier:
+    label: 国家局审批人
+    type: lookup
     group: 国家局核改
-    sortable: true
-    options:
-      - label: 国家级文物部门已核改
-        value: yes
-      - label: 国家级文物部门未核改
-        value: no
-    defaultValue: no
     searchable: true
+    reference_to: space_users
   nation_verify_date:
     label: 国家局审批日期
     type: date
@@ -148,15 +151,18 @@ list_views:
       - visitors
       - new_built
       - new_record
+  tobesubmited:
+    label: 待上报/待修改
+    filters: [["verify_state", "=", "draft"]]
   province_tobeverified:
-    label: 待省局核改
-    filters: [["province_verify_state", "=", "no"]]
+    label: 待省局审核
+    filters: [["verify_state", "=", "province_verifying"]]
   nation_tobeverified:
-    label: 待国家局核改
-    filters: [["province_verify_state", "=", "yes"],["nation_verify_state", "=", "no"]]
+    label: 待国家局审核
+    filters: [["verify_state", "=", "nation_verifying"]]
   nation_verified:
-    label: 已核改
-    filters: [["nation_verify_state", "=", "yes"]]
+    label: 已审核同通过
+    filters: [["verify_state", "=", "verified"]]
 
 actions:
   submit: 
