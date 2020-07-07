@@ -148,7 +148,7 @@ list_views:
     label: 待国家局审核
     filters: [["verify_state", "=", "nation_verifying"]]
   nation_verified:
-    label: 已审核同通过
+    label: 已审核通过
     filters: [["verify_state", "=", "verified"]]
   all:
     label: 所有备案信息
