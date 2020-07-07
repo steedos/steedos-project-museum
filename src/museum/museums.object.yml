@@ -72,75 +72,39 @@ fields:
     filterable: true
     required: true
     defaultValue: false
-  address_province:
-    label: 省
-    type: select
-    sortable: true
-    options:
-      - label: 北京
-        value: beijing
-      - label: 新疆
-        value: xinjiang
-    filterable: true
-    searchable: true
-    required: true
-  address_city:
-    label: 市(区)
-    type: select
-    sortable: true
-    options:
-      - label: 喀什地区
-        value: kashi
-      - label: 和田地区
-        value: hetian
-    filterable: true
-    searchable: true
-    required: true
-  address_county:
-    label: 县(市、区)
-    type: select
-    sortable: true
-    options:
-      - label: 莎车县
-        value: shachexian
-      - label: 叶城县
-        value: yechengxian
-    filterable: true
-    searchable: true
-    required: true
   address_provinceCode:
-    label: 省2
+    label: 省
     type: lookup
     reference_to: province
     required: true
   address_cityCode:
-    label: 县(市、区)2
+    label: 市(区)
     type: lookup
     reference_to: city
     required: true
     depend_on: 
-      - provinceCode
+      - address_provinceCode
     filtersFunction: !!js/function |
       function (filters, dependValues) {
-        if(dependValues && dependValues.provinceCode){
-          return "provinceCode eq " + dependValues.provinceCode;
+        if(dependValues && dependValues.address_provinceCode){
+          return "provinceCode eq " + dependValues.address_provinceCode;
         }
         else{
           return "null eq -1"
         }
       }
   address_areaCode:
-    label: 区县2
+    label: 县(市、区)
     type: lookup
     reference_to: area
     required: true
     depend_on: 
-      - provinceCode
-      - cityCode
+      - address_provinceCode
+      - address_cityCode
     filtersFunction: !!js/function |
       function (filters, dependValues) {
-        if(dependValues && dependValues.provinceCode && dependValues.cityCode){
-          return "provinceCode eq " + dependValues.provinceCode + " and cityCode eq " + dependValues.cityCode;
+        if(dependValues && dependValues.address_provinceCode && dependValues.address_cityCode){
+          return "provinceCode eq " + dependValues.address_provinceCode + " and cityCode eq " + dependValues.address_cityCode;
         }
         else{
           return "null eq -1"
