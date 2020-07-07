@@ -13,9 +13,11 @@
     "dependencies": {
         "@steedos/accounts": "1.19.8",
         "@steedos/steedos-plugin-workflow": "^2.0.8",
+        "china-division": "^2.3.1",
         "dotenv-flow": "^3.1.0",
         "mssql": "^6.2.0",
         "mysql": "^2.18.1",
+        "sqlite3": "^5.0.0",
         "steedos-server": "1.21.1"
     },
     "devDependencies": {

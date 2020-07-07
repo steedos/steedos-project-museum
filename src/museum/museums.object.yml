@@ -108,6 +108,44 @@ fields:
     filterable: true
     searchable: true
     required: true
+  address_provinceCode:
+    label: 省2
+    type: lookup
+    reference_to: province
+    required: true
+  address_cityCode:
+    label: 县(市、区)2
+    type: lookup
+    reference_to: city
+    required: true
+    depend_on: 
+      - provinceCode
+    filtersFunction: !!js/function |
+      function (filters, dependValues) {
+        if(dependValues && dependValues.provinceCode){
+          return "provinceCode eq " + dependValues.provinceCode;
+        }
+        else{
+          return "null eq -1"
+        }
+      }
+  address_areaCode:
+    label: 区县2
+    type: lookup
+    reference_to: area
+    required: true
+    depend_on: 
+      - provinceCode
+      - cityCode
+    filtersFunction: !!js/function |
+      function (filters, dependValues) {
+        if(dependValues && dependValues.provinceCode && dependValues.cityCode){
+          return "provinceCode eq " + dependValues.provinceCode + " and cityCode eq " + dependValues.cityCode;
+        }
+        else{
+          return "null eq -1"
+        }
+      }
   address:
     label: 具体地址
     type: text
