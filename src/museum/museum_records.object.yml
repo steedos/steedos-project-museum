@@ -85,12 +85,16 @@ fields:
     options:
       - label: 待上报/待修改
         value: draft
+        color: bad6f2
       - label: 省级文物部门审核
         value: province_verifying
+        color: f28b46
       - label: 国家级文物部门审核
         value: nation_verifying
+        color: e4e669
       - label: 已审核通过
         value: verified
+        color: 08dd9a
     defaultValue: draft
     searchable: true
   owner: 
@@ -157,9 +161,10 @@ list_views:
   all:
     label: 所有备案信息
     columns:
+      - field: verify_state 
+        width: 190
       - year
       - museum_id
-      - verify_state
       - collection_qty
       - treasure_qty
       - gradeone_qty
